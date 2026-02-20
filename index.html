@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Software Developer & AI Automation Builder</title>
+    <meta name="description"
+        content="Portfolio of a Strategic Product Builder, Software Developer, and AI Automation Specialist.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'gray-50': '#F9FAFB',
+                        'gray-100': '#F3F4F6',
+                        'gray-200': '#E5E7EB',
+                        'gray-800': '#1F2937',
+                        'gray-900': '#111827',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased selection:bg-gray-900 selection:text-white">
+
+    <!-- Navigation (Simple & Minimal) -->
+    <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-gray-100/50 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-sm font-semibold tracking-tight hover:text-gray-600 transition-colors">Nicolas
+                Llanos</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-500">
+                <a href="#work" class="hover:text-gray-900 transition-colors" data-lang="en">Work</a>
+                <a href="#work" class="hover:text-gray-900 transition-colors hidden" data-lang="es">Experiencia</a>
+
+                <a href="#projects" class="hover:text-gray-900 transition-colors" data-lang="en">Projects</a>
+                <a href="#projects" class="hover:text-gray-900 transition-colors hidden" data-lang="es">Proyectos</a>
+
+                <a href="#about" class="hover:text-gray-900 transition-colors" data-lang="en">About</a>
+                <a href="#about" class="hover:text-gray-900 transition-colors hidden" data-lang="es">Sobre mí</a>
+
+                <a href="#contact" class="hover:text-gray-900 transition-colors" data-lang="en">Contact</a>
+                <a href="#contact" class="hover:text-gray-900 transition-colors hidden" data-lang="es">Contacto</a>
+
+                <button id="lang-toggle"
+                    class="px-3 py-1 rounded-full border border-gray-200 text-xs font-semibold hover:bg-gray-50 transition-colors">
+                    ES
+                </button>
+            </div>
+            <!-- Mobile Menu Button (Placeholder for functionality) -->
+            <button class="md:hidden text-gray-500 hover:text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12 px-6">
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto min-h-[85vh] flex flex-col justify-center opacity-0 animate-fade-in"
+            style="animation-delay: 0.1s;">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Text Content (Left) -->
+                <!-- Text Content (Left) -->
+                <div class="order-2 lg:order-1 space-y-8 text-center lg:text-left">
+                    <div data-lang="en">
+                        <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6">
+                            Nicolas Llanos
+                        </h1>
+                        <h2 class="text-xl md:text-2xl font-medium text-gray-600 tracking-wide">
+                            AI Automation Builder <span class="text-gray-300 mx-2">|</span>
+                            Full Stack Developer <span class="text-gray-300 mx-2">|</span>
+                            Founder
+                        </h2>
+                        <p class="text-lg text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed mt-6">
+                            Full Stack Developer, Founder, and Automation Systems Architect focused on building
+                            structured, scalable systems that streamline operations and create real business impact. <br
+                                class="hidden md:block">
+                            I design and ship end-to-end digital solutions — from architecture to deployment — combining
+                            technical depth, product thinking, and entrepreneurial drive.
+                        </p>
+
+                        <!-- Actions -->
+                        <div class="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#work"
+                                class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gray-900 px-8 font-medium text-white transition-all duration-300 hover:bg-gray-800 hover:w-full sm:hover:w-auto w-full sm:w-auto">
+                                <span>View Work</span>
+                                <div
+                                    class="absolute inset-0 -z-10 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                                </div>
+                            </a>
+                            <a href="#contact"
+                                class="inline-flex h-12 items-center justify-center rounded-md border border-gray-200 bg-white px-8 font-medium text-gray-700 transition-all duration-300 hover:border-gray-300 hover:bg-gray-50 w-full sm:w-auto">
+                                Contact Me
+                            </a>
+                        </div>
+                        <!-- Secondary Link -->
+                        <div class="pt-2">
+                            <a href="#"
+                                class="text-sm font-medium text-gray-400 hover:text-gray-900 transition-colors inline-flex items-center gap-2 group">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 transition-transform group-hover:-translate-y-1" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+
+                    <div data-lang="es" class="hidden">
+                        <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6">
+                            Nicolas Llanos
+                        </h1>
+                        <h2 class="text-xl md:text-2xl font-medium text-gray-600 tracking-wide">
+                            AI Automation Builder <span class="text-gray-300 mx-2">|</span>
+                            Desarrollador Full Stack <span class="text-gray-300 mx-2">|</span>
+                            Founder
+                        </h2>
+                        <p class="text-lg text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed mt-6">
+                            Desarrollador Full Stack, Fundador y Arquitecto de Sistemas de Automatización enfocado en
+                            construir sistemas estructurados y escalables que agilizan operaciones y crean un impacto de
+                            negocio real. <br class="hidden md:block">
+                            Diseño y despliego soluciones digitales de punta a punta — desde la arquitectura hasta la
+                            implementación — combinando profundidad técnica, pensamiento de producto e impulso
+                            emprendedor.
+                        </p>
+                        <!-- Actions -->
+                        <div class="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#work"
+                                class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gray-900 px-8 font-medium text-white transition-all duration-300 hover:bg-gray-800 hover:w-full sm:hover:w-auto w-full sm:w-auto">
+                                <span>Ver Trabajo</span>
+                                <div
+                                    class="absolute inset-0 -z-10 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                                </div>
+                            </a>
+                            <a href="#contact"
+                                class="inline-flex h-12 items-center justify-center rounded-md border border-gray-200 bg-white px-8 font-medium text-gray-700 transition-all duration-300 hover:border-gray-300 hover:bg-gray-50 w-full sm:w-auto">
+                                Contactar
+                            </a>
+                        </div>
+                        <!-- Secondary Link -->
+                        <div class="pt-2">
+                            <a href="#"
+                                class="text-sm font-medium text-gray-400 hover:text-gray-900 transition-colors inline-flex items-center gap-2 group">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 transition-transform group-hover:-translate-y-1" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Descargar CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo (Right) -->
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                        <!-- Image Container with Effect -->
+                        <div class="relative w-full h-full rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="assets/img/profile.png" alt="Profile Photo"
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        </div>
+
+                        <!-- Decorative Elements behind image -->
+                        <div
+                            class="absolute -z-10 top-6 -right-6 w-full h-full border-2 border-gray-100 rounded-2xl hidden lg:block">
+                        </div>
+                        <div
+                            class="absolute -z-10 -bottom-6 -left-6 w-24 h-24 bg-gray-50 rounded-full blur-2xl opacity-60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= FOUNDER SECTION ================= -->
+        <section id="founder" class="py-24 max-w-4xl mx-auto opacity-0 animate-on-scroll">
+            <h3
+                class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-12 border-l-2 border-gray-900 pl-4">
+                Founder & Product Builder
+            </h3>
+
+            <!-- English Content -->
+            <div class="space-y-6" data-lang="en">
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-900">Founder & Product Builder</h4>
+                    <span class="text-sm text-gray-400">2024 — Present · Remote</span>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed">
+                    <a href="https://helloiagency.com" target="_blank" rel="noopener noreferrer"
+                        class="font-medium text-gray-800 underline underline-offset-4 decoration-gray-300 hover:decoration-gray-900 transition">
+                        iAgency
+                    </a>
+                    was born from a deep personal drive: the need to build something of my own.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    After years working in structured environments and developing solutions for others, I felt the urge
+                    to take full
+                    ownership of a project — not just writing code, but defining the vision, making strategic decisions,
+                    and building a
+                    product from zero.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    I wanted to experience what it truly means to create something that depends entirely on my judgment,
+                    my execution,
+                    and my consistency.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    What started as a technical exploration evolved into building an AI automation initiative focused on
+                    turning
+                    fragmented operations into structured systems, simplifying repetitive work, and helping businesses
+                    operate with more
+                    clarity and leverage.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    It represents more than a professional initiative. It’s the result of my ongoing pursuit to build,
+                    to take
+                    creative ownership, and to create projects that reflect how I think.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    My long-term goal is to keep developing my own products, lead tech initiatives end-to-end, and build
+                    solutions with
+                    real-world impact.
+                </p>
+            </div>
+
+            <!-- Spanish Content -->
+            <div class="space-y-6 hidden" data-lang="es">
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-900">Founder & Product Builder</h4>
+                    <span class="text-sm text-gray-400">2024 — Presente · Remoto</span>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed">
+                    <a href="https://helloiagency.com" target="_blank" rel="noopener noreferrer"
+                        class="font-medium text-gray-800 underline underline-offset-4 decoration-gray-300 hover:decoration-gray-900 transition">
+                        iAgency
+                    </a>
+                    nació de un impulso personal profundo: la necesidad de construir algo propio.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Después de años trabajando en entornos estructurados y desarrollando soluciones para otros, sentí la
+                    urgencia
+                    de tomar total responsabilidad de un proyecto — no solo escribir código, sino definir la visión,
+                    tomar decisiones estratégicas
+                    y construir un producto desde cero.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Quería experimentar lo que realmente significa crear algo que depende enteramente de mi juicio,
+                    mi ejecución y mi consistencia.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Lo que comenzó como una exploración técnica evolucionó hacia la construcción de una iniciativa de
+                    automatización con IA enfocada en
+                    convertir operaciones fragmentadas en sistemas estructurados, simplificando el trabajo repetitivo y
+                    ayudando a las empresas
+                    a operar con más claridad y apalancamiento.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Representa más que una iniciativa profesional. Es el resultado de mi búsqueda continua por
+                    construir,
+                    tomar propiedad creativa y crear proyectos que reflejen mi forma de pensar.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Mi objetivo a largo plazo es seguir desarrollando mis propios productos, liderar iniciativas
+                    tecnológicas de punta a punta
+                    y construir soluciones con impacto en el mundo real.
+                </p>
+            </div>
+        </section>
+
+
+
+
+        <!-- ================= WORK EXPERIENCE ================= -->
+        <section id="work" class="py-24 max-w-4xl mx-auto opacity-0 animate-on-scroll">
+            <!-- English Content -->
+            <div data-lang="en">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-12 border-l-2 border-gray-900 pl-4">
+                    Professional Experience
+                </h3>
+
+                <div class="space-y-20">
+
+                    <!-- iAgency -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">2024 — Present</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900"> Founder & Automation Systems Architect
+                                </h4>
+                                <span class="text-sm text-gray-400">
+                                    <a href="https://helloiagency.com" target="_blank" rel="noopener noreferrer"
+                                        class="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-900 transition">
+                                        iAgency
+                                    </a>
+                                    · Remote
+                                </span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Architected multi-channel AI automation systems integrating WhatsApp, Instagram and
+                                    web
+                                    platforms.</li>
+                                <li>Engineered event-driven workflows using n8n, OpenAI API and Meta Cloud API to
+                                    orchestrate structured conversational flows.</li>
+                                <li>Designed CRM-style dashboards and normalized database schemas to centralize
+                                    operations
+                                    and improve process visibility.</li>
+                                <li>Developed scalable web platforms and controlled demo environments simulating
+                                    real-world
+                                    business automation scenarios.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Freelance -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">Jan 2023 — Present</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900">Freelance Web Developer</h4>
+                                <span class="text-sm text-gray-400">Remote</span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Designed and developed custom web platforms for small businesses, focusing on
+                                    scalable
+                                    architecture and clean UI.</li>
+                                <li>Built SaaS-style systems including scheduling, instructor management and payment
+                                    tracking features.</li>
+                                <li>Developed full-stack solutions using PHP, JavaScript, MySQL, Bootstrap and
+                                    FullCalendar.
+                                </li>
+                                <li>Handled database design, authentication flows and real-time data updates for
+                                    operational
+                                    efficiency.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Applica -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">Nov 2021 — Dec 2024</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900">iOS Mobile Developer</h4>
+                                <span class="text-sm text-gray-400">Applica Mobile · Santa Fe, Argentina</span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Developed iOS applications using Swift and Xcode with MVC and MVVM architectures.
+                                </li>
+                                <li>Integrated REST APIs and push notifications for stable real-time data flows.</li>
+                                <li>Implemented Firebase Analytics and Crashlytics for monitoring and performance
+                                    optimization.</li>
+                                <li>Collaborated with product and design teams to ship scalable features.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Impronta -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">Jun 2021 — Nov 2021</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900">Full Stack Software Developer</h4>
+                                <span class="text-sm text-gray-400">Impronta Solutions · Santa Fe, Argentina</span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Built responsive interfaces using HTML5, CSS, JavaScript and Bootstrap.</li>
+                                <li>Developed backend systems with PHP and Laravel integrating REST APIs.</li>
+                                <li>Optimized SQL queries for performance and reliability.</li>
+                                <li>Worked in Git-based collaborative development environments.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Spanish Content -->
+            <div data-lang="es" class="hidden">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-12 border-l-2 border-gray-900 pl-4">
+                    Experiencia Profesional
+                </h3>
+
+                <div class="space-y-20">
+
+                    <!-- iAgency -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">2024 — Presente</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900"> Fundador y Arquitecto de Sistemas de
+                                    Automatización</h4>
+                                <span class="text-sm text-gray-400">
+                                    <a href="https://helloiagency.com" target="_blank" rel="noopener noreferrer"
+                                        class="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-900 transition">
+                                        iAgency
+                                    </a>
+                                    · Remoto
+                                </span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Arquitectura de sistemas de automatización AI multicanal integrando WhatsApp,
+                                    Instagram y plataformas web.</li>
+                                <li>Ingeniería de flujos de trabajo basados en eventos usando n8n, API de OpenAI y API
+                                    de Meta Cloud para orquestar flujos conversacionales estructurados.</li>
+                                <li>Diseño de dashboards tipo CRM y esquemas de bases de datos normalizados para
+                                    centralizar operaciones y mejorar la visibilidad de los procesos.</li>
+                                <li>Desarrollo de plataformas web escalables y entornos de demostración controlados
+                                    simulando escenarios de automatización empresarial del mundo real.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Freelance -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">Ene 2023 — Presente</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900">Desarrollador Web Freelance</h4>
+                                <span class="text-sm text-gray-400">Remoto</span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Diseño y desarrollo de plataformas web a medida para pequeñas empresas, enfocándose
+                                    en arquitectura escalable y UI limpia.</li>
+                                <li>Construcción de sistemas tipo SaaS incluyendo funciones de programación, gestión de
+                                    instructores y seguimiento de pagos.</li>
+                                <li>Desarrollo de soluciones full-stack usando PHP, JavaScript, MySQL, Bootstrap y
+                                    FullCalendar.</li>
+                                <li>Manejo del diseño de bases de datos, flujos de autenticación y actualizaciones de
+                                    datos en tiempo real para la eficiencia operativa.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Applica -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">Nov 2021 — Dic 2024</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900">Desarrollador Móvil iOS</h4>
+                                <span class="text-sm text-gray-400">Applica Mobile · Santa Fe, Argentina</span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Desarrollo de aplicaciones iOS usando Swift y Xcode con arquitecturas MVC y MVVM.
+                                </li>
+                                <li>Integración de APIs REST y notificaciones push para flujos de datos estables en
+                                    tiempo real.</li>
+                                <li>Implementación de Firebase Analytics y Crashlytics para monitoreo y optimización de
+                                    rendimiento.</li>
+                                <li>Colaboración con equipos de producto y diseño para lanzar funcionalidades
+                                    escalables.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Impronta -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <span class="text-sm text-gray-500 font-mono">Jun 2021 — Nov 2021</span>
+                        </div>
+                        <div class="md:col-span-3 space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900">Desarrollador de Software Full Stack
+                                </h4>
+                                <span class="text-sm text-gray-400">Impronta Solutions · Santa Fe, Argentina</span>
+                            </div>
+
+                            <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <li>Construcción de interfaces responsivas usando HTML5, CSS, JavaScript y Bootstrap.
+                                </li>
+                                <li>Desarrollo de sistemas backend con PHP y Laravel integrando APIs REST.</li>
+                                <li>Optimización de consultas SQL para rendimiento y confiabilidad.</li>
+                                <li>Trabajo en entornos de desarrollo colaborativo basados en Git.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <div class="border-t border-gray-100 my-24 max-w-5xl mx-auto"></div>
+
+        <!-- Selected Projects Section (Case Studies) -->
+        <section id="projects" class="max-w-5xl mx-auto opacity-0 animate-on-scroll">
+
+            <!-- English Content -->
+            <div data-lang="en">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-20 border-l-2 border-gray-900 pl-4">
+                    Selected Case Studies
+                </h3>
+
+                <div class="space-y-32">
+                    <!-- Project 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                        <div class="space-y-8 sticky top-24">
+                            <div>
+                                <h4 class="text-3xl font-bold text-gray-900 mb-3">Nebula Dashboard</h4>
+                                <p class="text-lg text-gray-600 leading-relaxed">An AI-powered analytics platform for
+                                    tracking real-time marketing performance across channels.</p>
+                            </div>
+
+                            <div class="space-y-6 border-t border-gray-100 pt-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">The
+                                            Problem</span>
+                                        <p class="text-sm text-gray-600">Marketing teams spent 15h/week manually
+                                            aggregating CSV reports.</p>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">The
+                                            Solution</span>
+                                        <p class="text-sm text-gray-600">Automated ETL pipelines and a real-time React
+                                            dashboard.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-3">Architecture
+                                        & Stack</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">React</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">Python</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">AWS
+                                            Lambda</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">PostgreSQL</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">Outcome</span>
+                                    <p class="text-sm text-gray-900 font-medium">Saved approx. $4k/month in manual labor
+                                        costs.</p>
+                                </div>
+                            </div>
+
+                            <a href="#"
+                                class="inline-flex items-center text-sm font-semibold text-gray-900 border-b border-gray-300 pb-0.5 hover:border-gray-900 transition-colors">
+                                View Case Study
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div
+                            class="bg-gray-50 rounded-xl aspect-[4/3] border border-gray-100 overflow-hidden relative group shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <!-- Placeholder for Project Image -->
+                            <div
+                                class="absolute inset-0 flex flex-col items-center justify-center text-gray-300 bg-gray-50">
+                                <svg class="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <span class="text-sm font-medium">Project Interface Mockup</span>
+                            </div>
+                            <!-- Overlay on hover -->
+                            <div
+                                class="absolute inset-0 bg-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                        <div class="md:order-2 space-y-8 sticky top-24">
+                            <div>
+                                <h4 class="text-3xl font-bold text-gray-900 mb-3">Finance Flow Mobile</h4>
+                                <p class="text-lg text-gray-600 leading-relaxed">Native iOS application for personal
+                                    expense tracking with AI categorization.</p>
+                            </div>
+
+                            <div class="space-y-6 border-t border-gray-100 pt-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">The
+                                            Problem</span>
+                                        <p class="text-sm text-gray-600">Existing apps were too complex and required
+                                            manual tagging.</p>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">The
+                                            Solution</span>
+                                        <p class="text-sm text-gray-600">On-device ML model to categorize transactions
+                                            instantly.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-3">Architecture
+                                        & Stack</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">SwiftUI</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">CoreML</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">Firebase</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">Outcome</span>
+                                    <p class="text-sm text-gray-900 font-medium">4.8 App Store rating and 10k+
+                                        downloads.</p>
+                                </div>
+                            </div>
+
+                            <a href="#"
+                                class="inline-flex items-center text-sm font-semibold text-gray-900 border-b border-gray-300 pb-0.5 hover:border-gray-900 transition-colors">
+                                View Case Study
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div
+                            class="md:order-1 bg-gray-50 rounded-xl aspect-[4/3] border border-gray-100 overflow-hidden relative group shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div
+                                class="absolute inset-0 flex flex-col items-center justify-center text-gray-300 bg-gray-50">
+                                <svg class="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <span class="text-sm font-medium">Mobile App Screens</span>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spanish Content -->
+            <div data-lang="es" class="hidden">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-20 border-l-2 border-gray-900 pl-4">
+                    Casos de Estudio Seleccionados
+                </h3>
+
+                <div class="space-y-32">
+                    <!-- Project 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                        <div class="space-y-8 sticky top-24">
+                            <div>
+                                <h4 class="text-3xl font-bold text-gray-900 mb-3">Nebula Dashboard</h4>
+                                <p class="text-lg text-gray-600 leading-relaxed">Una plataforma de analítica impulsada
+                                    por IA para el seguimiento del rendimiento de marketing en tiempo real a través de
+                                    canales.</p>
+                            </div>
+
+                            <div class="space-y-6 border-t border-gray-100 pt-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">El
+                                            Problema</span>
+                                        <p class="text-sm text-gray-600">Los equipos de marketing pasaban 15h/semana
+                                            agregando manualmente reportes CSV.</p>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">La
+                                            Solución</span>
+                                        <p class="text-sm text-gray-600">Pipelines ETL automatizados y un dashboard en
+                                            tiempo real con React.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-3">Arquitectura
+                                        & Stack</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">React</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">Python</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">AWS
+                                            Lambda</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">PostgreSQL</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">Resultado</span>
+                                    <p class="text-sm text-gray-900 font-medium">Ahorro de aprox. $4k/mes en costos
+                                        laborales manuales.</p>
+                                </div>
+                            </div>
+
+                            <a href="#"
+                                class="inline-flex items-center text-sm font-semibold text-gray-900 border-b border-gray-300 pb-0.5 hover:border-gray-900 transition-colors">
+                                Ver Caso de Estudio
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div
+                            class="bg-gray-50 rounded-xl aspect-[4/3] border border-gray-100 overflow-hidden relative group shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <!-- Placeholder for Project Image -->
+                            <div
+                                class="absolute inset-0 flex flex-col items-center justify-center text-gray-300 bg-gray-50">
+                                <svg class="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <span class="text-sm font-medium">Mockup de Interfaz del Proyecto</span>
+                            </div>
+                            <!-- Overlay on hover -->
+                            <div
+                                class="absolute inset-0 bg-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                        <div class="md:order-2 space-y-8 sticky top-24">
+                            <div>
+                                <h4 class="text-3xl font-bold text-gray-900 mb-3">Finance Flow Mobile</h4>
+                                <p class="text-lg text-gray-600 leading-relaxed">Aplicación nativa iOS para seguimiento
+                                    de gastos personales con categorización por IA.</p>
+                            </div>
+
+                            <div class="space-y-6 border-t border-gray-100 pt-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">El
+                                            Problema</span>
+                                        <p class="text-sm text-gray-600">Las apps existentes eran demasiado complejas y
+                                            requerían etiquetado manual.</p>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">La
+                                            Solución</span>
+                                        <p class="text-sm text-gray-600">Modelo ML en el dispositivo para categorizar
+                                            transacciones instantáneamente.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-3">Arquitectura
+                                        & Stack</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">SwiftUI</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">CoreML</span>
+                                        <span
+                                            class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 text-xs font-medium rounded-full">Firebase</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-2">Resultado</span>
+                                    <p class="text-sm text-gray-900 font-medium">Calificación de 4.8 en App Store y +10k
+                                        descargas.</p>
+                                </div>
+                            </div>
+
+                            <a href="#"
+                                class="inline-flex items-center text-sm font-semibold text-gray-900 border-b border-gray-300 pb-0.5 hover:border-gray-900 transition-colors">
+                                Ver Caso de Estudio
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div
+                            class="md:order-1 bg-gray-50 rounded-xl aspect-[4/3] border border-gray-100 overflow-hidden relative group shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div
+                                class="absolute inset-0 flex flex-col items-center justify-center text-gray-300 bg-gray-50">
+                                <svg class="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <span class="text-sm font-medium">Pantallas de la App Móvil</span>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="border-t border-gray-100 my-24 max-w-5xl mx-auto"></div>
+
+        <!-- Founder Section -->
+        <section id="about" class="py-24 max-w-4xl mx-auto opacity-0 animate-on-scroll">
+
+            <!-- English Content -->
+            <div data-lang="en">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16 border-l-2 border-gray-900 pl-4">
+                    Founder & Product Builder
+                </h3>
+
+                <div class="bg-gray-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
+                    <!-- Decorative Blur -->
+                    <div
+                        class="absolute top-0 right-0 w-96 h-96 bg-gray-800 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -mr-20 -mt-20">
+                    </div>
+
+                    <div class="relative z-10">
+                        <h4 class="text-3xl font-bold mb-6 tracking-tight">Systematic Architecture. Strategic Vision.
+                        </h4>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl">
+                            I don't just write code; I build engines for growth. My approach combines deep technical
+                            expertise with a product-first mindset to create scalable, automated systems that drive real
+                            business value.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-t border-gray-700/50 pt-10">
+                            <div>
+                                <span class="block text-xl font-bold mb-2 text-white">Architecture</span>
+                                <p class="text-sm text-gray-400 leading-relaxed">Event-driven microservices, serverless
+                                    infrastructure, and robust API design.</p>
+                            </div>
+                            <div>
+                                <span class="block text-xl font-bold mb-2 text-white">Automation</span>
+                                <p class="text-sm text-gray-400 leading-relaxed">Eliminating friction through
+                                    intelligent workflows and AI integration.</p>
+                            </div>
+                            <div>
+                                <span class="block text-xl font-bold mb-2 text-white">Product</span>
+                                <p class="text-sm text-gray-400 leading-relaxed">Focusing on user experience,
+                                    scalability, and measurable impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spanish Content -->
+            <div data-lang="es" class="hidden">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16 border-l-2 border-gray-900 pl-4">
+                    Fundador y Constructor de Productos
+                </h3>
+
+                <div class="bg-gray-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
+                    <!-- Decorative Blur -->
+                    <div
+                        class="absolute top-0 right-0 w-96 h-96 bg-gray-800 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -mr-20 -mt-20">
+                    </div>
+
+                    <div class="relative z-10">
+                        <h4 class="text-3xl font-bold mb-6 tracking-tight">Arquitectura Sistemática. Visión Estratégica.
+                        </h4>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl">
+                            No solo escribo código; construyo motores de crecimiento. Mi enfoque combina una profunda
+                            experiencia técnica con una mentalidad orientada al producto para crear sistemas escalables
+                            y automatizados que generan valor comercial real.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-t border-gray-700/50 pt-10">
+                            <div>
+                                <span class="block text-xl font-bold mb-2 text-white">Arquitectura</span>
+                                <p class="text-sm text-gray-400 leading-relaxed">Microservicios orientados a eventos,
+                                    infraestructura serverless y diseño robusto de APIs.</p>
+                            </div>
+                            <div>
+                                <span class="block text-xl font-bold mb-2 text-white">Automatización</span>
+                                <p class="text-sm text-gray-400 leading-relaxed">Eliminando la fricción a través de
+                                    flujos de trabajo inteligentes e integración de IA.</p>
+                            </div>
+                            <div>
+                                <span class="block text-xl font-bold mb-2 text-white">Producto</span>
+                                <p class="text-sm text-gray-400 leading-relaxed">Enfocándose en la experiencia de
+                                    usuario, escalabilidad e impacto medible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="border-t border-gray-100 my-24 max-w-5xl mx-auto"></div>
+
+        <!-- Technical Stack Section -->
+        <section class="max-w-5xl mx-auto opacity-0 animate-on-scroll">
+
+            <!-- English Content -->
+            <div data-lang="en">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16 border-l-2 border-gray-900 pl-4">
+                    Systems & Technologies
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <!-- Stack Category 1 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Frontend & UI</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>React / Next.js</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>Framer Motion</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <!-- Stack Category 2 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Backend & API</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>Python / FastAPI</li>
+                            <li>Node.js / Express</li>
+                            <li>Go (Golang)</li>
+                            <li>GraphQL / REST</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                    <!-- Stack Category 3 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">AI & Automation
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>OpenAI API / LLMs</li>
+                            <li>LangChain</li>
+                            <li>n8n / Zapier</li>
+                            <li>Vector Databases</li>
+                            <li>Model Fine-tuning</li>
+                        </ul>
+                    </div>
+                    <!-- Stack Category 4 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Infrastructure
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>AWS / Vercel</li>
+                            <li>Docker / Kubernetes</li>
+                            <li>PostgreSQL / Redis</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>System Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spanish Content -->
+            <div data-lang="es" class="hidden">
+                <h3
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16 border-l-2 border-gray-900 pl-4">
+                    Sistemas y Tecnologías
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <!-- Stack Category 1 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Frontend & UI</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>React / Next.js</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>Framer Motion</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <!-- Stack Category 2 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Backend & API</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>Python / FastAPI</li>
+                            <li>Node.js / Express</li>
+                            <li>Go (Golang)</li>
+                            <li>GraphQL / REST</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                    <!-- Stack Category 3 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">IA y
+                            Automatización</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>OpenAI API / LLMs</li>
+                            <li>LangChain</li>
+                            <li>n8n / Zapier</li>
+                            <li>Vector Databases</li>
+                            <li>Model Fine-tuning</li>
+                        </ul>
+                    </div>
+                    <!-- Stack Category 4 -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Infraestructura
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>AWS / Vercel</li>
+                            <li>Docker / Kubernetes</li>
+                            <li>PostgreSQL / Redis</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>System Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Philosophy Section -->
+        <section class="py-32 max-w-4xl mx-auto text-center opacity-0 animate-on-scroll">
+
+            <div data-lang="en">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16">How I Think</h3>
+                <div class="space-y-12">
+                    <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">I design systems,<br> <span
+                            class="text-gray-300">not just features.</span></p>
+                    <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">I optimize for<br> <span
+                            class="text-gray-300">clarity and scale.</span></p>
+                    <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">I build automation<br> <span
+                            class="text-gray-300">that reduces friction.</span></p>
+                </div>
+            </div>
+
+            <div data-lang="es" class="hidden">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16">Cómo Pienso</h3>
+                <div class="space-y-12">
+                    <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Diseño sistemas,<br> <span
+                            class="text-gray-300">no solo funcionalidades.</span></p>
+                    <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Optimizo para<br> <span
+                            class="text-gray-300">la claridad y la escala.</span></p>
+                    <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Construyo automatización<br>
+                        <span class="text-gray-300">que reduce la fricción.</span>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="border-t border-gray-100 my-10 max-w-5xl mx-auto"></div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 max-w-3xl mx-auto text-center opacity-0 animate-on-scroll">
+
+            <div data-lang="en">
+                <h3 class="text-sm font-semibold text-gray-900 mb-6">Ready to build something exceptional?</h3>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight">Let's start the
+                    conversation.</h2>
+                <p class="text-lg text-gray-500 mb-10 max-w-xl mx-auto">
+                    Whether you have a project in mind or just want to discuss the future of tech, I'm always open to
+                    new
+                    ideas and opportunities.
+                </p>
+            </div>
+
+            <div data-lang="es" class="hidden">
+                <h3 class="text-sm font-semibold text-gray-900 mb-6">¿Listo para construir algo excepcional?</h3>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight">Empecemos la conversación.
+                </h2>
+                <p class="text-lg text-gray-500 mb-10 max-w-xl mx-auto">
+                    Ya sea que tengas un proyecto en mente o solo quieras discutir el futuro de la tecnología, siempre
+                    estoy abierto a nuevas ideas y oportunidades.
+                </p>
+            </div>
+
+            <a href="mailto:hello@example.com"
+                class="inline-flex h-12 items-center justify-center rounded-md bg-gray-900 px-8 font-medium text-white transition-all duration-300 hover:bg-gray-800 hover:scale-105">
+                hello@example.com
+            </a>
+
+            <div class="flex justify-center gap-8 mt-12">
+                <a href="#" class="text-gray-400 hover:text-gray-900 transition-colors">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-900 transition-colors">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-900 transition-colors">
+                    <span class="sr-only">Twitter</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 text-center text-sm text-gray-400">
+        <p data-lang="en">&copy; 2026 Nicolas Llanos. Built with precision.</p>
+        <p data-lang="es" class="hidden">&copy; 2026 Nicolas Llanos. Construido con precisión.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
