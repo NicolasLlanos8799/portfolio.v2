@@ -2573,11 +2573,16 @@
 
                 track.innerHTML = '';
                 images.forEach((src, i) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = alts[i] || `Project image ${i + 1}`;
-                    img.className = 'carousel-slide w-full h-full object-cover' + (i === 0 ? '' : ' hidden');
-                    track.appendChild(img);
+                    img.className = 'w-full h-full object-cover';
+
+                    slide.appendChild(img);
+                    track.appendChild(slide);
                 });
 
                 const slides = Array.from(track.querySelectorAll('.carousel-slide'));
@@ -2604,7 +2609,7 @@
                 }
 
                 function render() {
-                    slides.forEach((s, i) => s.classList.toggle('hidden', i !== index));
+                    track.style.transform = `translateX(-${index * 100}%)`;
                     dots.forEach((d, i) => {
                         d.classList.toggle('bg-gray-900', i === index);
                         d.classList.toggle('border-gray-900', i === index);

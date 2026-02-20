@@ -16,3 +16,33 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+.project-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project-carousel .carousel-track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    transition: transform 350ms ease;
+    will-change: transform;
+}
+
+.project-carousel .carousel-slide {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.project-carousel .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
