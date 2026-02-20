@@ -56,3 +56,30 @@ body {
 .project-carousel:hover .carousel-slide img {
     transform: scale(1.02);
 }
+
+/* SPA Routing Styles */
+.page-view {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.page-view.is-active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-view.transitioning-out {
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-view {
+        transition: none !important;
+        transform: none !important;
+    }
+}
