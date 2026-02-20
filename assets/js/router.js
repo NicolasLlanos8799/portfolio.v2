@@ -6,7 +6,9 @@
 const routes = {
     '#/': 'view-home',
     '#/projects': 'view-projects',
-    '#/work': 'view-work'
+    '#/work': 'view-work',
+    '#/contact': 'view-contact',
+    '#/about': 'view-about'
 };
 
 const scrollState = new Map();
