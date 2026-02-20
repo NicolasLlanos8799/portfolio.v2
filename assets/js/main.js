@@ -1,4 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenuBtn && mobileMenu) {
+        function toggleMobileMenu() {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+
+            if (!isExpanded) {
+                mobileMenu.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    mobileMenu.classList.remove('opacity-0');
+                });
+                hamburgerIcon.classList.add('hidden');
+                hamburgerIcon.classList.remove('block');
+                closeIcon.classList.remove('hidden');
+                closeIcon.classList.add('block');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                hamburgerIcon.classList.remove('hidden');
+                hamburgerIcon.classList.add('block');
+                closeIcon.classList.add('hidden');
+                closeIcon.classList.remove('block');
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        const mobileLinks = mobileMenu.querySelectorAll('a[data-link]');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenuBtn.getAttribute('aria-expanded') === 'true') {
+                    toggleMobileMenu();
+                }
+            });
+        });
+    }
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -38,51 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700', 'ease-out');
         observer.observe(el);
     });
-    // Language Switcher Logic
-    const langToggle = document.getElementById('lang-toggle');
-    const html = document.documentElement;
-
-    // Set default language to Spanish if not set
-    if (!localStorage.getItem('lang')) {
-        localStorage.setItem('lang', 'es');
-    }
-
-    const currentLang = localStorage.getItem('lang');
-    setLanguage(currentLang);
-
-    if (langToggle) {
-        langToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            const newLang = html.getAttribute('lang') === 'es' ? 'en' : 'es';
-            setLanguage(newLang);
-            localStorage.setItem('lang', newLang);
-        });
-    }
-
-    function setLanguage(lang) {
-        html.setAttribute('lang', lang);
-
-        // Update Toggle Text
-        if (langToggle) {
-            langToggle.textContent = lang === 'es' ? 'EN' : 'ES'; // Show the option to switch TO
-        }
-
-        // Toggle visibility
-        document.querySelectorAll('[data-lang]').forEach(el => {
-            if (el.getAttribute('data-lang') === lang) {
-                el.classList.remove('hidden');
-                el.classList.add('block'); // Or inline-block/flex depending on element, but block is safe for most text containers
-                // Clean up animation classes if needed to re-trigger
-                if (el.classList.contains('animate-on-scroll')) {
-                    el.classList.remove('opacity-0', 'translate-y-4');
-                    el.classList.add('opacity-100', 'translate-y-0');
-                }
-            } else {
-                el.classList.add('hidden');
-                el.classList.remove('block');
-            }
-        });
-
-        // Specific fix for flex containers if needed, or we rely on parent containers having translated content
-    }
 });
