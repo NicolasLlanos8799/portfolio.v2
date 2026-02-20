@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!isExpanded) {
                 mobileMenu.classList.remove('hidden');
-                requestAnimationFrame(() => {
-                    mobileMenu.classList.remove('opacity-0');
-                });
+                mobileMenu.classList.add('flex');
+                document.getElementById('navbar').classList.add('bg-white');
+                document.getElementById('navbar').classList.remove('bg-white/80', 'backdrop-blur-md');
                 hamburgerIcon.classList.add('hidden');
                 hamburgerIcon.classList.remove('block');
                 closeIcon.classList.remove('hidden');
                 closeIcon.classList.add('block');
                 document.body.style.overflow = 'hidden';
             } else {
-                mobileMenu.classList.add('opacity-0');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
+                document.getElementById('navbar').classList.remove('bg-white');
+                document.getElementById('navbar').classList.add('bg-white/80', 'backdrop-blur-md');
+                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.add('hidden');
                 hamburgerIcon.classList.remove('hidden');
                 hamburgerIcon.classList.add('block');
                 closeIcon.classList.add('hidden');

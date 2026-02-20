@@ -75,7 +75,7 @@
             </div>
             <!-- Mobile Menu Button -->
             <button aria-controls="mobile-menu" aria-expanded="false"
-                class="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none" id="mobile-menu-btn">
+                class="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none p-2 -mr-2" id="mobile-menu-btn">
                 <!-- Hamburger Icon -->
                 <svg class="h-6 w-6 block" fill="none" id="hamburger-icon" stroke="currentColor" viewbox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
@@ -90,24 +90,23 @@
                 </svg>
             </button>
         </div>
-        <!-- Mobile Menu Container -->
-        <div class="fixed inset-0 top-16 bg-white/95 backdrop-blur-md z-40 hidden flex-col items-center justify-center space-y-8 text-xl font-medium text-gray-900 transition-opacity duration-300 opacity-0 md:hidden"
-            id="mobile-menu">
-            <a class="hover:text-gray-600 transition-colors" data-link="" href="#/">Nicolas Llanos</a>
-
-            <a class="hover:text-gray-600 transition-colors" data-link="" href="#/">Inicio</a>
-
-            <a class="hover:text-gray-600 transition-colors" data-link="" href="#/about">Sobre mí</a>
-
-            <a class="hover:text-gray-600 transition-colors" data-link="" href="#/work">Experiencia</a>
-
-            <a class="hover:text-gray-600 transition-colors" data-link="" href="#/projects">Proyectos</a>
-
-            <a class="hover:text-gray-600 transition-colors" data-link="" href="#/contact">Contacto</a>
-            <a class="mt-4 px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold hover:bg-gray-50 transition-colors"
-                href="index.html" id="lang-toggle-mobile">EN</a>
-        </div>
     </nav>
+    <!-- Mobile Menu Container -->
+    <div class="fixed inset-0 top-16 bg-white z-40 hidden flex-col items-center pt-16 space-y-8 text-xl font-medium text-gray-900 md:hidden"
+        id="mobile-menu">
+        <a class="hover:text-gray-600 transition-colors" data-link="" href="#/">Inicio</a>
+
+        <a class="hover:text-gray-600 transition-colors" data-link="" href="#/about">Sobre mí</a>
+
+        <a class="hover:text-gray-600 transition-colors" data-link="" href="#/work">Experiencia</a>
+
+        <a class="hover:text-gray-600 transition-colors" data-link="" href="#/projects">Proyectos</a>
+
+        <a class="hover:text-gray-600 transition-colors" data-link="" href="#/contact">Contacto</a>
+
+        <a class="mt-4 px-6 py-2 rounded-full border border-gray-200 text-base font-semibold hover:bg-gray-50 transition-colors"
+            href="index.html" id="lang-toggle-mobile">EN</a>
+    </div>
     <main class="pt-24 pb-12 px-6 flex-grow flex flex-col">
         <!-- SPA VIEWS CONTAINER -->
         <div aria-hidden="false" class="page-view is-active flex-grow" id="view-home">
@@ -125,11 +124,11 @@
                                 Nicolas Llanos
                             </h1>
                             <h2 class="text-xl md:text-2xl font-medium text-gray-600 tracking-wide">
-                                AI Automation Builder <span class="text-gray-300 mx-2">|</span>
+                                Constructor de Automatizaciones IA <span class="text-gray-300 mx-2">|</span>
                                 Desarrollador Full Stack <span class="text-gray-300 mx-2">|</span>
-                                Founder
+                                Fundador
                             </h2>
-                            <p class="text-lg text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed mt-6">
+                            <p class="text-lg text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed mt-6 text-justify">
                                 Desarrollador Full Stack, Fundador y Arquitecto de Sistemas de Automatización enfocado
                                 en
                                 construir sistemas estructurados y escalables que agilizan operaciones y crean un
@@ -205,7 +204,7 @@
                     </div>
                     <!-- Photo (Right) -->
                     <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-                        <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                        <div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px]">
                             <!-- Image Container with Effect -->
                             <div class="relative w-full h-full rounded-2xl overflow-hidden bg-gray-100">
                                 <img alt="Profile Photo"
@@ -228,52 +227,67 @@
             <div class="max-w-5xl mx-auto pt-8">
                 <!-- ================= FOUNDER SECTION ================= -->
                 <!-- ================= WORK EXPERIENCE ================= -->
-                <!-- Founder Section -->
+                <!-- About Section -->
                 <section class="py-12 max-w-4xl mx-auto opacity-0 animate-on-scroll">
-                    <!-- English Content -->
-
-                    <!-- Spanish Content -->
                     <div>
                         <h3
                             class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16 border-l-2 border-gray-900 pl-4">
-                            Fundador y Constructor de Productos
+                            Sobre mí
                         </h3>
+
                         <div class="bg-gray-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
+
                             <!-- Decorative Blur -->
                             <div
                                 class="absolute top-0 right-0 w-96 h-96 bg-gray-800 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -mr-20 -mt-20">
                             </div>
-                            <div class="relative z-10">
-                                <h4 class="text-3xl font-bold mb-6 tracking-tight">Arquitectura Sistemática. Visión
-                                    Estratégica.
-                                </h4>
-                                <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl">
-                                    No solo escribo código; construyo motores de crecimiento. Mi enfoque combina una
-                                    profunda
-                                    experiencia técnica con una mentalidad orientada al producto para crear sistemas
-                                    escalables
-                                    y automatizados que generan valor comercial real.
+
+                            <div
+                                class="relative z-10 space-y-4 text-gray-300 text-lg leading-relaxed max-w-3xl text-justify">
+                                <p>
+                                    Comencé mi carrera participando en el desarrollo y evolución de productos digitales
+                                    dentro de equipos técnicos, trabajando en arquitectura, lógica de negocio y
+                                    construcción de sistemas.
                                 </p>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-t border-gray-700/50 pt-10">
-                                    <div>
-                                        <span class="block text-xl font-bold mb-2 text-white">Arquitectura</span>
-                                        <p class="text-sm text-gray-400 leading-relaxed">Microservicios orientados a
-                                            eventos,
-                                            infraestructura serverless y diseño robusto de APIs.</p>
-                                    </div>
-                                    <div>
-                                        <span class="block text-xl font-bold mb-2 text-white">Automatización</span>
-                                        <p class="text-sm text-gray-400 leading-relaxed">Eliminando la fricción a través
-                                            de
-                                            flujos de trabajo inteligentes e integración de IA.</p>
-                                    </div>
-                                    <div>
-                                        <span class="block text-xl font-bold mb-2 text-white">Producto</span>
-                                        <p class="text-sm text-gray-400 leading-relaxed">Enfocándose en la experiencia
-                                            de
-                                            usuario, escalabilidad e impacto medible.</p>
-                                    </div>
-                                </div>
+
+                                <p>
+                                    Desde el inicio, me interesó comprender no solo el código, sino el funcionamiento
+                                    integral del producto.
+                                </p>
+
+                                <p>
+                                    Esa etapa me permitió aprender no solo a nivel técnico, sino también humano y
+                                    organizacional. Entendí cómo funciona una empresa desde dentro: el trabajo en
+                                    equipo, la comunicación entre áreas, la planificación y la responsabilidad
+                                    compartida.
+                                </p>
+
+                                <p>
+                                    Con el tiempo, esa visión se transformó en una motivación clara: construir
+                                    soluciones de principio a fin.
+                                </p>
+
+                                <p>
+                                    No solo desarrollar funcionalidades, sino diseñar la estructura, definir la lógica,
+                                    integrar tecnologías y llevar una idea desde su concepción hasta su implementación
+                                    real.
+                                </p>
+
+                                <p>
+                                    Trabajando de forma más independiente confirmé que lo que realmente me mueve es el
+                                    proceso completo de creación. Me entusiasma imaginar una solución, estructurarla y
+                                    verla funcionar en el mundo real.
+                                </p>
+
+                                <p>
+                                    Disfruto interactuar con clientes, entender sus necesidades y traducirlas en
+                                    sistemas claros y bien pensados.
+                                </p>
+
+                                <p>
+                                    No me defino por una sola tecnología; me define la capacidad de construir e integrar
+                                    sistemas con visión de producto.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -281,9 +295,6 @@
                 <div class="border-t border-gray-100 my-12 max-w-5xl mx-auto"></div>
                 <!-- Technical Stack Section -->
                 <section class="max-w-5xl mx-auto opacity-0 animate-on-scroll">
-                    <!-- English Content -->
-
-                    <!-- Spanish Content -->
                     <div>
                         <h3
                             class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16 border-l-2 border-gray-900 pl-4">
@@ -292,77 +303,111 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                             <!-- Stack Category 1 -->
                             <div class="space-y-4">
-                                <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Frontend
-                                    &amp;
-                                    UI
+                                <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">
+                                    Ingeniería de Software
                                 </h4>
                                 <ul class="space-y-2 text-sm text-gray-600">
-                                    <li>React / Next.js</li>
-                                    <li>TypeScript</li>
-                                    <li>Tailwind CSS</li>
-                                    <li>Framer Motion</li>
-                                    <li>Vue.js</li>
+                                    <li>Desarrollo iOS (Swift, UIKit, SwiftUI)</li>
+                                    <li>Desarrollo Web Full-Stack (HTML, CSS, JS, PHP, Laravel)</li>
+                                    <li>Diseño e Integración de APIs REST</li>
+                                    <li>Autenticación y gestión de sesiones</li>
+                                    <li>Modelado y optimización de base de datos (SQL)</li>
+                                    <li>Firebase (Analytics, Auth, Crashlytics)</li>
+                                    <li>Control de versiones (Git, GitHub, Sourcetree)</li>
                                 </ul>
                             </div>
                             <!-- Stack Category 2 -->
                             <div class="space-y-4">
-                                <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">Backend
-                                    &amp;
-                                    API
+                                <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">
+                                    IA & Automatización
                                 </h4>
                                 <ul class="space-y-2 text-sm text-gray-600">
-                                    <li>Python / FastAPI</li>
-                                    <li>Node.js / Express</li>
-                                    <li>Go (Golang)</li>
-                                    <li>GraphQL / REST</li>
-                                    <li>Django</li>
+                                    <li>Integración con OpenAI / ChatGPT API</li>
+                                    <li>Prompt Engineering & Structured Outputs</li>
+                                    <li>Orquestación de workflows (n8n)</li>
+                                    <li>Automatización basada en APIs / Webhooks</li>
+                                    <li>Diseño de flujos conversacionales</li>
+                                    <li>Integración de procesos event-driven</li>
                                 </ul>
                             </div>
                             <!-- Stack Category 3 -->
                             <div class="space-y-4">
-                                <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">IA y
-                                    Automatización</h4>
+                                <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">
+                                    Optimización & Crecimiento
+                                </h4>
                                 <ul class="space-y-2 text-sm text-gray-600">
-                                    <li>OpenAI API / LLMs</li>
-                                    <li>LangChain</li>
-                                    <li>n8n / Zapier</li>
-                                    <li>Vector Databases</li>
-                                    <li>Model Fine-tuning</li>
+                                    <li>SEO Técnico (estructura, indexabilidad)</li>
+                                    <li>Optimización de rendimiento web</li>
+                                    <li>UI/UX Optimization</li>
+                                    <li>Arquitectura orientada a conversión</li>
+                                    <li>Google Analytics & Tracking</li>
                                 </ul>
                             </div>
                             <!-- Stack Category 4 -->
                             <div class="space-y-4">
                                 <h4 class="text-sm font-semibold text-gray-900 border-b border-gray-100 pb-2">
-                                    Infraestructura
+                                    Metodologías & Colaboración
                                 </h4>
                                 <ul class="space-y-2 text-sm text-gray-600">
-                                    <li>AWS / Vercel</li>
-                                    <li>Docker / Kubernetes</li>
-                                    <li>PostgreSQL / Redis</li>
-                                    <li>CI/CD Pipelines</li>
-                                    <li>System Design</li>
+                                    <li>Metodologías Ágiles (SCRUM)</li>
+                                    <li>Gestión de proyectos (Jira)</li>
+                                    <li>Planificación por sprints</li>
+                                    <li>Colaboración en equipos técnicos</li>
+                                    <li>Comunicación técnica fluida</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- Work Philosophy Section -->
-                <section class="py-16 max-w-4xl mx-auto text-center opacity-0 animate-on-scroll">
 
+                <div class="border-t border-gray-100 my-12 max-w-5xl mx-auto"></div>
+
+                <!-- Languages Section -->
+                <section class="max-w-5xl mx-auto opacity-0 animate-on-scroll">
                     <div>
-                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16">Cómo Pienso</h3>
-                        <div class="space-y-12">
-                            <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Diseño
-                                sistemas,<br />
-                                <span class="text-gray-300">no solo funcionalidades.</span>
-                            </p>
-                            <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Optimizo para<br />
-                                <span class="text-gray-300">la claridad y la escala.</span>
-                            </p>
-                            <p class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Construyo
-                                automatización<br />
-                                <span class="text-gray-300">que reduce la fricción.</span>
-                            </p>
+                        <h3
+                            class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16 border-l-2 border-gray-900 pl-4">
+                            Idiomas
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                            <!-- Spanish -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-center space-x-5 hover:-translate-y-1">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-2xl shadow-inner">
+                                    🇪🇸
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-bold text-gray-900">Español</h4>
+                                    <p class="text-sm text-gray-500 font-medium">Nativo</p>
+                                </div>
+                            </div>
+
+                            <!-- Italian -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-center space-x-5 hover:-translate-y-1">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-2xl shadow-inner">
+                                    🇮🇹
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-bold text-gray-900">Italiano</h4>
+                                    <p class="text-sm text-gray-500 font-medium">B2</p>
+                                </div>
+                            </div>
+
+                            <!-- English -->
+                            <div
+                                class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex items-center space-x-5 hover:-translate-y-1">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-2xl shadow-inner">
+                                    🇬🇧
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-bold text-gray-900">Inglés</h4>
+                                    <p class="text-sm text-gray-500 font-medium">B1</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -385,8 +430,8 @@
                     </p>
                 </div>
                 <a class="inline-flex h-12 items-center justify-center rounded-md bg-gray-900 px-8 font-medium text-white transition-all duration-300 hover:bg-gray-800 hover:scale-105"
-                    href="mailto:hello@example.com">
-                    hello@example.com
+                    href="mailto:nicolasllanossw@gmail.com">
+                    nicolasllanossw@gmail.com
                 </a>
                 <div class="flex justify-center gap-8 mt-12">
                     <a class="text-gray-400 hover:text-gray-900 transition-colors" href="#">
@@ -436,13 +481,13 @@
                                 <div class="space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Rebels Kite School Surf</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             Plataforma SaaS para optimizar la operación de una escuela: agenda,
                                             asignación de
                                             instructores, pagos y facturación mensual.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -528,13 +573,13 @@
                                 <div class="md:order-2 space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Inferno Growshop</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             Catálogo online liviano conectado a WhatsApp para pedidos directos, pensado
                                             para
                                             comercios sin e-commerce completo.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -615,13 +660,13 @@
                                 <div class="space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Eva (Portfolio)</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             Portfolio minimalista y responsive para una artista visual, con foco en
                                             storytelling
                                             visual y navegación simple.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -699,13 +744,13 @@
                                 <div class="md:order-2 space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Club Fiserv (iOS)</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             App fintech iOS de beneficios y cashback, con pagos por QR y flujos de
                                             wallet,
                                             desarrollada en equipo.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -796,13 +841,13 @@
                                 <div class="space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">PosNet Mobile (iOS)</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             App para negocios con pagos QR, Pix, seguimiento de ventas y transferencias
                                             seguras,
                                             desarrollada como parte de un equipo.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -883,13 +928,13 @@
                                 <div class="md:order-2 space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Indotica (iOS)</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             App de domótica y automatización industrial para controlar y monitorear
                                             dispositivos
                                             con estructura MVVM escalable.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -973,13 +1018,13 @@
                                 <div class="space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Sociale (iOS)</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             App de pagos con conexión vía QR a sitios web, flujos de documentos KYC/AML,
                                             cuentas
                                             de pago y chat de soporte en vivo.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -1070,12 +1115,12 @@
                                 <div class="md:order-2 space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">My Malls (iOS)</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             Solución de envíos internacionales para comprar en cualquier tienda online,
                                             consolidar paquetes y recibir soporte.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -1166,13 +1211,13 @@
                                 <div class="space-y-8 sticky top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Yacaré (iOS)</h4>
-                                        <p class="text-lg text-gray-600 leading-relaxed">
+                                        <p class="text-lg text-gray-600 leading-relaxed text-justify">
                                             App de pagos con QR 3.0 interoperable, gestión de códigos QR y
                                             compatibilidad con
                                             principales apps de pago en Argentina.
                                         </p>
                                     </div>
-                                    <div class="space-y-6 border-t border-gray-100 pt-6">
+                                    <div class="space-y-4 border-t border-gray-100 pt-6">
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div>
                                                 <span
@@ -1271,52 +1316,44 @@
                 <!-- English Content -->
 
                 <!-- Spanish Content -->
-                <div class="space-y-6">
+                <div class="space-y-4 text-justify">
                     <div>
                         <h4 class="text-xl font-semibold text-gray-900">Founder &amp; Product Builder</h4>
                         <span class="text-sm text-gray-400">2024 — Presente · Remoto</span>
                     </div>
+
                     <p class="text-gray-600 leading-relaxed">
                         <a class="font-medium text-gray-800 underline underline-offset-4 decoration-gray-300 hover:decoration-gray-900 transition"
                             href="https://helloiagency.com" rel="noopener noreferrer" target="_blank">
                             iAgency
                         </a>
-                        nació de un impulso personal profundo: la necesidad de construir algo propio.
+                        es una iniciativa enfocada en el diseño y construcción de sistemas de automatización con
+                        inteligencia
+                        artificial.
                     </p>
+
                     <p class="text-gray-600 leading-relaxed">
-                        Después de años trabajando en entornos estructurados y desarrollando soluciones para otros,
-                        sentí la
-                        urgencia
-                        de tomar total responsabilidad de un proyecto — no solo escribir código, sino definir la visión,
-                        tomar decisiones estratégicas
-                        y construir un producto desde cero.
+                        El proyecto integra APIs, flujos conversacionales estructurados, herramientas de orquestación y
+                        plataformas multicanal para transformar procesos manuales en sistemas organizados y escalables.
                     </p>
+
                     <p class="text-gray-600 leading-relaxed">
-                        Quería experimentar lo que realmente significa crear algo que depende enteramente de mi juicio,
-                        mi ejecución y mi consistencia.
+                        Desde la arquitectura técnica hasta la implementación y presentación al cliente, iAgency
+                        representa mi
+                        enfoque de construir soluciones completas, con visión estratégica y ejecución técnica integral.
                     </p>
+
                     <p class="text-gray-600 leading-relaxed">
-                        Lo que comenzó como una exploración técnica evolucionó hacia la construcción de una iniciativa
-                        de
-                        automatización con IA enfocada en
-                        convertir operaciones fragmentadas en sistemas estructurados, simplificando el trabajo
-                        repetitivo y
-                        ayudando a las empresas
-                        a operar con más claridad y apalancamiento.
-                    </p>
-                    <p class="text-gray-600 leading-relaxed">
-                        Representa más que una iniciativa profesional. Es el resultado de mi búsqueda continua por
-                        construir,
-                        tomar propiedad creativa y crear proyectos que reflejen mi forma de pensar.
-                    </p>
-                    <p class="text-gray-600 leading-relaxed">
-                        Mi objetivo a largo plazo es seguir desarrollando mis propios productos, liderar iniciativas
-                        tecnológicas de punta a punta
-                        y construir soluciones con impacto en el mundo real.
+                        Más que un experimento tecnológico, es un entorno donde diseño, pruebo y desarrollo productos
+                        propios,
+                        conectando inteligencia artificial, automatización y arquitectura de producto en escenarios
+                        reales.
                     </p>
                 </div>
             </section>
+
             <div class="border-t border-gray-100 my-8 max-w-5xl mx-auto"></div>
+
             <section class="max-w-4xl mx-auto pt-4" id="work">
                 <!-- English Content -->
 
@@ -1326,6 +1363,7 @@
                         class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-12 border-l-2 border-gray-900 pl-4">
                         Experiencia Profesional
                     </h3>
+
                     <div class="space-y-20">
                         <!-- iAgency -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -1334,8 +1372,7 @@
                             </div>
                             <div class="md:col-span-3 space-y-4">
                                 <div>
-                                    <h4 class="text-xl font-semibold text-gray-900"> Fundador y Arquitecto de Sistemas
-                                        de
+                                    <h4 class="text-xl font-semibold text-gray-900">Fundador y Arquitecto de Sistemas de
                                         Automatización</h4>
                                     <span class="text-sm text-gray-400">
                                         <a class="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-900 transition"
@@ -1345,19 +1382,23 @@
                                         · Remoto
                                     </span>
                                 </div>
-                                <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <ul class="space-y-3 text-gray-600 leading-relaxed text-justify">
                                     <li>Arquitectura de sistemas de automatización AI multicanal integrando WhatsApp,
-                                        Instagram y plataformas web.</li>
+                                        Instagram y
+                                        plataformas web.</li>
                                     <li>Ingeniería de flujos de trabajo basados en eventos usando n8n, API de OpenAI y
-                                        API
-                                        de Meta Cloud para orquestar flujos conversacionales estructurados.</li>
+                                        API de Meta
+                                        Cloud para orquestar flujos conversacionales estructurados.</li>
                                     <li>Diseño de dashboards tipo CRM y esquemas de bases de datos normalizados para
-                                        centralizar operaciones y mejorar la visibilidad de los procesos.</li>
+                                        centralizar
+                                        operaciones y mejorar la visibilidad de los procesos.</li>
                                     <li>Desarrollo de plataformas web escalables y entornos de demostración controlados
-                                        simulando escenarios de automatización empresarial del mundo real.</li>
+                                        simulando
+                                        escenarios de automatización empresarial del mundo real.</li>
                                 </ul>
                             </div>
                         </div>
+
                         <!-- Freelance -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <div>
@@ -1368,21 +1409,22 @@
                                     <h4 class="text-xl font-semibold text-gray-900">Desarrollador Web Freelance</h4>
                                     <span class="text-sm text-gray-400">Remoto</span>
                                 </div>
-                                <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <ul class="space-y-3 text-gray-600 leading-relaxed text-justify">
                                     <li>Diseño y desarrollo de plataformas web a medida para pequeñas empresas,
-                                        enfocándose
-                                        en arquitectura escalable y UI limpia.</li>
+                                        enfocándose en
+                                        arquitectura escalable y UI limpia.</li>
                                     <li>Construcción de sistemas tipo SaaS incluyendo funciones de programación, gestión
                                         de
                                         instructores y seguimiento de pagos.</li>
                                     <li>Desarrollo de soluciones full-stack usando PHP, JavaScript, MySQL, Bootstrap y
                                         FullCalendar.</li>
                                     <li>Manejo del diseño de bases de datos, flujos de autenticación y actualizaciones
-                                        de
-                                        datos en tiempo real para la eficiencia operativa.</li>
+                                        de datos
+                                        en tiempo real para la eficiencia operativa.</li>
                                 </ul>
                             </div>
                         </div>
+
                         <!-- Applica -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <div>
@@ -1393,20 +1435,22 @@
                                     <h4 class="text-xl font-semibold text-gray-900">Desarrollador Móvil iOS</h4>
                                     <span class="text-sm text-gray-400">Applica Mobile · Santa Fe, Argentina</span>
                                 </div>
-                                <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <ul class="space-y-3 text-gray-600 leading-relaxed text-justify">
                                     <li>Desarrollo de aplicaciones iOS usando Swift y Xcode con arquitecturas MVC y
-                                        MVVM.
-                                    </li>
+                                        MVVM.</li>
                                     <li>Integración de APIs REST y notificaciones push para flujos de datos estables en
-                                        tiempo real.</li>
+                                        tiempo
+                                        real.</li>
                                     <li>Implementación de Firebase Analytics y Crashlytics para monitoreo y optimización
                                         de
                                         rendimiento.</li>
                                     <li>Colaboración con equipos de producto y diseño para lanzar funcionalidades
-                                        escalables.</li>
+                                        escalables.
+                                    </li>
                                 </ul>
                             </div>
                         </div>
+
                         <!-- Impronta -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <div>
@@ -1418,16 +1462,16 @@
                                     </h4>
                                     <span class="text-sm text-gray-400">Impronta Solutions · Santa Fe, Argentina</span>
                                 </div>
-                                <ul class="space-y-3 text-gray-600 leading-relaxed">
+                                <ul class="space-y-3 text-gray-600 leading-relaxed text-justify">
                                     <li>Construcción de interfaces responsivas usando HTML5, CSS, JavaScript y
-                                        Bootstrap.
-                                    </li>
+                                        Bootstrap.</li>
                                     <li>Desarrollo de sistemas backend con PHP y Laravel integrando APIs REST.</li>
                                     <li>Optimización de consultas SQL para rendimiento y confiabilidad.</li>
                                     <li>Trabajo en entornos de desarrollo colaborativo basados en Git.</li>
                                 </ul>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
