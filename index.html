@@ -457,13 +457,34 @@
                     <!-- English Content -->
                     <div>
                         <h3
-                            class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-20 border-l-2 border-gray-900 pl-4">
+                            class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8 border-l-2 border-gray-900 pl-4">
                             Projects — Case Studies
                         </h3>
-                        <div class="space-y-32">
+
+                        <!-- Project Filters -->
+                        <div class="flex flex-wrap gap-4 mb-16" id="project-filters">
+                            <button
+                                class="filter-btn active px-5 py-2 rounded-full border border-gray-900 bg-gray-900 text-white text-sm font-medium transition-colors cursor-pointer"
+                                data-filter="all">
+                                All
+                            </button>
+                            <button
+                                class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-gray-900 hover:text-gray-900 bg-transparent text-sm font-medium transition-colors cursor-pointer"
+                                data-filter="web">
+                                Web & Systems
+                            </button>
+                            <button
+                                class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-gray-900 hover:text-gray-900 bg-transparent text-sm font-medium transition-colors cursor-pointer"
+                                data-filter="ios">
+                                iOS
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col gap-32" id="projects-container">
                             <!-- 1) Sofi — Virtual Assistant (AI) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start">
-                                <div class="space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="web">
+                                <div class="space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3"><span
                                                 data-i18n="projects.sofi.name">Sofi</span></h4>
@@ -539,8 +560,9 @@
                             </div>
 
                             <!-- 2) Leo — Sales Assistant (AI) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start">
-                                <div class="md:order-2 space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="web">
+                                <div class="md:order-2 space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3"><span
                                                 data-i18n="projects.leo.name">Leo</span></h4>
@@ -617,8 +639,9 @@
                             </div>
 
                             <!-- 3) Hello iAgency — Agency Website -->
-                            <div class="grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start">
-                                <div class="space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="web">
+                                <div class="space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3"><span
                                                 data-i18n="projects.helloiagency.name">Hello iAgency</span></h4>
@@ -691,8 +714,9 @@
                                 </div>
                             </div>
                             <!-- 1) Rebels Kite School Surf (Web) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start">
-                                <div class="space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="web">
+                                <div class="space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3"><span
                                                 data-i18n="projects.rebels.name">Rebels Kite School Surf</span></h4>
@@ -770,8 +794,9 @@
                                 </div>
                             </div>
                             <!-- 2) Inferno Growshop (Web) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start">
-                                <div class="md:order-2 space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="web">
+                                <div class="md:order-2 space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3"><span
                                                 data-i18n="projects.inferno.name">Inferno Growshop</span></h4>
@@ -840,8 +865,9 @@
                                 </div>
                             </div>
                             <!-- 3) Eva (Web) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start">
-                                <div class="space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="web">
+                                <div class="space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Eva (Artist Portfolio)</h4>
                                         <p data-i18n="projects.eva.desc"
@@ -906,27 +932,10 @@
                                 </div>
                             </div>
 
-                            <!-- ===== iOS Visual Separator ===== -->
-                            <div class="w-full block">
-                                <div class="w-full border-t border-gray-200 mb-16"></div>
-                                <div class="pl-4 border-l-2 border-gray-900">
-                                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">
-                                        Mobile Ecosystem
-                                    </h3>
-                                    <h4 class="text-3xl font-bold text-gray-900 mb-4 tracking-tight">Native iOS
-                                        Development</h4>
-                                    <p class="text-lg text-gray-600 leading-relaxed max-w-3xl text-justify">
-                                        Building scalable, high-performance mobile applications using Swift. The main
-                                        focus is on clean architecture (MVVM), complex integrations (Fintech payment
-                                        gateways, WebSockets, Bluetooth IoT), and creating fluid, purely native
-                                        interfaces for the Apple ecosystem.
-                                    </p>
-                                </div>
-                            </div>
-
                             <!-- 4) Club Fiserv (Mobile) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start">
-                                <div class="md:order-2 space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="ios">
+                                <div class="md:order-2 space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Club Fiserv (iOS)</h4>
                                         <p data-i18n="projects.fiserv.desc"
@@ -1004,8 +1013,9 @@
                                 </div>
                             </div>
                             <!-- 5) PosNet Mobile (Mobile) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start">
-                                <div class="space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="ios">
+                                <div class="space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">PosNet Mobile (iOS)</h4>
                                         <p data-i18n="projects.posnet.desc"
@@ -1076,8 +1086,9 @@
                                 </div>
                             </div>
                             <!-- 6) Indotica (Mobile) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start">
-                                <div class="md:order-2 space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="ios">
+                                <div class="md:order-2 space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Indotica (iOS)</h4>
                                         <p data-i18n="projects.indotica.desc"
@@ -1151,8 +1162,9 @@
                                 </div>
                             </div>
                             <!-- 7) Sociale (Mobile) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start">
-                                <div class="space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="ios">
+                                <div class="space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Sociale (iOS)</h4>
                                         <p data-i18n="projects.sociale.desc"
@@ -1231,8 +1243,9 @@
                                 </div>
                             </div>
                             <!-- 8) My Malls (Mobile) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start">
-                                <div class="md:order-2 space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[6fr_4fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="ios">
+                                <div class="md:order-2 space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">My Malls (iOS)</h4>
                                         <p data-i18n="projects.mymalls.desc"
@@ -1313,8 +1326,9 @@
                                 </div>
                             </div>
                             <!-- 9) Yacaré (Mobile) -->
-                            <div class="grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start">
-                                <div class="space-y-8 sticky top-24">
+                            <div class="project-item grid grid-cols-1 md:grid-cols-[4fr_6fr] gap-16 items-start transition-opacity duration-500 ease-in-out"
+                                data-category="ios">
+                                <div class="space-y-8 md:sticky md:top-24">
                                     <div>
                                         <h4 class="text-3xl font-bold text-gray-900 mb-3">Yacaré (iOS)</h4>
                                         <p data-i18n="projects.yacare.desc"
@@ -1649,8 +1663,49 @@
 
         // Expose globally
         window.initProjectCarousels = initProjectCarousels;
+
+        // Project Filtering Logic
+        function initProjectFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projects = document.querySelectorAll('.project-item');
+
+            if (!filterBtns.length || !projects.length) return;
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active state on buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-gray-900', 'text-white', 'border-gray-900');
+                        b.classList.add('bg-transparent', 'text-gray-600', 'border-gray-200', 'hover:text-gray-900');
+                    });
+
+                    btn.classList.add('active', 'bg-gray-900', 'text-white', 'border-gray-900');
+                    btn.classList.remove('bg-transparent', 'text-gray-600', 'border-gray-200', 'hover:text-gray-900');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    projects.forEach(project => {
+                        // Apply fade out first for smooth transition
+                        project.style.opacity = '0';
+
+                        setTimeout(() => {
+                            if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                                project.style.display = 'grid';
+                                // Slight delay to allow display flex to apply before fading in
+                                setTimeout(() => project.style.opacity = '1', 50);
+                            } else {
+                                project.style.display = 'none';
+                            }
+                        }, 300); // Wait for fade out to complete
+                    });
+                });
+            });
+        }
+        window.initProjectFilters = initProjectFilters;
+
         // Initialize on first load
         initProjectCarousels();
+        initProjectFilters();
     </script>
     <script src="assets/js/router.js"></script>
     <script src="assets/js/main.js"></script>
