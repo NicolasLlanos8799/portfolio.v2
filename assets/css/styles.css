@@ -57,6 +57,25 @@ body {
     transform: scale(1.02);
 }
 
+/* Mixed-format carousel: portrait phone aspect ratio */
+.project-carousel.carousel-mixed-format {
+    aspect-ratio: 2 / 3;
+    height: auto;
+    max-height: 500px;
+}
+
+.project-carousel.carousel-mixed-format .carousel-slide {
+    background-color: #f9fafb;
+}
+
+.project-carousel.carousel-mixed-format .carousel-slide img {
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
 /* SPA Routing Styles */
 .page-view {
     display: none;
