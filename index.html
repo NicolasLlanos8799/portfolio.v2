@@ -3,6 +3,16 @@
 <html class="scroll-smooth" lang="en">
 
 <head>
+    <!-- Language Detection -->
+    <script>
+        (function () {
+            if (sessionStorage.getItem('lang-pref') === 'en') return;
+            var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (lang.startsWith('es')) {
+                window.location.replace('index-es.html');
+            }
+        })();
+    </script>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Portfolio | Software Developer &amp; AI Automation Builder</title>
@@ -150,11 +160,11 @@
                             Nicolas Llanos
                         </h1>
                         <h2 class="text-xl md:text-2xl font-medium text-gray-600 tracking-wide">
-                            Full-Stack Developer <br class="hidden sm:block"> specialized in AI automation
+                            AI Automation Engineer | Full-Stack Developer
                         </h2>
                         <p class="text-lg text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed text-justify">
-                            I help companies optimize processes and reduce operational tasks through web platforms
-                            and automated systems powered by <span class="whitespace-nowrap w-fit">AI</span>.
+                            Building intelligent systems that combine software, automation, and AI to simplify
+                            operations and optimize business workflows.
                         </p>
                     </div>
 
@@ -165,7 +175,8 @@
                             View Projects
                         </a>
                         <a class="inline-flex h-12 items-center justify-center rounded-md border border-gray-200 bg-white px-8 font-medium text-gray-700 transition-all duration-300 hover:border-gray-300 hover:bg-gray-50 shadow-sm hover:shadow hover:-translate-y-0.5 w-full sm:w-auto"
-                            href="assets/docs/CV-NicolasLlanos.pdf" target="_blank" rel="noopener noreferrer">
+                            href="assets/cvs/Nicolas_Llanos_CV_EN.pdf" download="Nicolas_Llanos_CV_EN.pdf"
+                            rel="noopener noreferrer">
                             Download CV
                         </a>
                         <a class="inline-flex h-12 items-center justify-center rounded-md border border-gray-200 bg-white px-8 font-medium text-gray-700 transition-all duration-300 hover:border-gray-300 hover:bg-gray-50 shadow-sm hover:shadow hover:-translate-y-0.5 w-full sm:w-auto"
